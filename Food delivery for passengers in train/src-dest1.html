@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <div class="form-group">
+                            <h4>ENTER SOURCE</h4>
+                            <input type="text" placeholder="source" id="src">
+                        </div>
+                        <div class="form-group">
+                            <h4>ENTER DESTINATION</h4>
+                            <input type="text" placeholder="destination" id="dest">
+                        </div>
+			<div class="form-group">
+                            <button type="button" onclick="getvalue()">SUBMIT</button>
+                            
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script>
+    function getvalue(){
+        var source=document.getElementById("src").value;
+        var destination=document.getElementById("dest").value;
+        if(source=="chennai"){
+            if(destination=="coimbatore"){
+                window.location.replace("mas-cbe.html");
+            }
+        }
+        if(source=="chennai"){
+            if(destination=="mumbai"){
+                window.location.replace("mas-mum.html");
+            }
+        }
+        if(source=="chennai"){
+            if(destination=="trichy"){
+                window.location.replace("trichy.html");
+            }
+        }
+        if(source=="bangalore"){
+            if(destination=="delhi"){
+                window.location.replace("bag-del.html");
+            }
+        }
+        if(source=="delhi"){
+            if(destination=="mumbai"){
+                window.location.replace("del-mum.html");
+            }
+        }
+        if(source=="chennai"){
+            if(destination=="delhi"){
+                window.location.replace("mas-del.html");
+            }
+        }
+    }
+    </script>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

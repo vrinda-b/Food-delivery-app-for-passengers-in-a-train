@@ -1,0 +1,121 @@
+<html>
+<head>
+</head>
+<ul id="services-list">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-size:30px;
+  color:white;
+}
+/* Create three equal columns that floats next to each other */
+.column{
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  border: 3px solid aqua;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+<script>
+    function check1(field){
+        var amt=100;
+        for (i=0;i<field.length;i++)
+            if (field[i].checked==true)
+                amt=amt+Number(field[i].value);
+        alert("Delivery charge is Rs.100.00");
+        alert("Your bill amount is Rs."+amt);
+        alert("Please keep the correct change.");
+        window.location="index1.html";
+    }
+    function check2(field){
+        var amt=100;
+        for (i=0;i<field.length;i++)
+            if (field[i].checked==true)
+                amt=amt+Number(field[i].value);
+        alert("Delivery charge is Rs.100.00");
+        alert("Your bill amount is Rs."+amt);
+        alert("Please keep the correct change.");
+        window.location="index1.html";
+    }
+    function check3(field){
+        var amt=100;
+        for (i=0;i<field.length;i++)
+            if (field[i].checked==true)
+                amt=amt+Number(field[i].value);
+        alert("Delivery charge is Rs.100.00");
+        alert("Your bill amount is Rs."+amt);
+        alert("Please keep the correct change.");
+        window.location="index1.html";
+    }
+</script>
+   
+<div class="row">
+    <div class="column" style="background-image: url('bf.jpg');">
+        <h1 style="text-align:center; font-size:40px; color:Chartreuse;">BREAKFAST</h1>
+        <form name="breakfast">
+            <input type="checkbox" id="bk1" name="bk" value=50>
+            <label for="bk1" style="color:skyblue;">Idly(2)-Rs.50.00</label><br><br>
+            <input type="checkbox" id="bk2" name="bk" value=70>
+            <label for="bk2" style="color:skyblue;"> Onion Dosa - Rs.70.00</label><br><br>
+            <input type="checkbox" id="bk3" name="bk" value=85>
+            <label for="bk3" style="color:skyblue;"> Parotta(2) - Rs.85.00</label><br><br>
+            <input type="checkbox" id="bk4" name="bk" value=90>
+            <label for="bk4" style="color:skyblue;"> Poori(3) - Rs.90.00</label><br><br>
+            <input type="checkbox" id="bk5" name="bk" value=100>
+            <label for="bk5" style="color:skyblue;"> Spl_Dosa - Rs.100.00</label><br><br>
+            <input type="button" style="background-color:black;color:white;" value="Submit" onClick="check1(document.breakfast.bk)"/>
+        </form>
+    </div>
+
+    <div class="column" style="background-image: url('ln.jpg');">
+        <h1 style="text-align:center; font-size:40px; color:yellow;">LUNCH</h1>
+        <form name="lunch">
+            <input type="checkbox" id="ln1" name="ln" value=150>
+            <label for="ln1">Veg-Briyani - Rs.150.00</label><br><br>
+            <input type="checkbox" id="ln2" name="ln" value=230>
+            <label for="ln2"> Chicken-Briyani - Rs.230.00</label><br><br>
+            <input type="checkbox" id="ln3" name="ln" value=250>
+            <label for="ln3" > Chicken-Fried Rice - Rs.250.00</label><br><br>
+            <input type="checkbox" id="ln4" name="ln" value=200>
+            <label for="ln4"> Full meals - Rs200.00</label><br><br>
+            <input type="checkbox" id="ln5" name="ln" value=300>
+            <label for="ln5"> Mutton Briyani - Rs.300.00</label><br><br>
+            <input type="button" style="background-color:black;color:white;" value="Submit" onClick="check2(document.lunch.ln)"/>
+        </form>
+    </div>
+
+    <div class="column" id="bg"style="background-image: url('din.jpg');">
+        <h1 style="text-align:center; font-size:40px; color:orangered;">DINNER</h1>
+        <form name="dinner">
+            <input type="checkbox" id="din1" name="din" value=60>
+            <label for="din1" style="color:MediumBlue;">Rava Idly(2) - Rs.60.00</label><br><br>
+            <input type="checkbox" id="din2" name="din" value=90>
+            <label for="din2" style="color:MediumBlue;"> Pasta - Rs.90.00</label><br><br>
+            <input type="checkbox" id="din3" name="din" value=115>
+            <label for="din3" style="color:MediumBlue;"> Chicken-Sandwich - Rs.115.00</label><br><br>
+            <input type="checkbox" id="din4" name="din" value=50>
+            <label for="din4" style="color:MediumBlue;">Chappathi- Rs.50.00</label><br><br>
+            <input type="checkbox" id="din5" name="din" value=85>
+            <label for="din5" style="color:MediumBlue;"> Plain Naan-Rs.85.00</label><br><br>
+            <input type="button" style="background-color:black;color:white;" value="Submit" onClick="check3(document.dinner.din)"/>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

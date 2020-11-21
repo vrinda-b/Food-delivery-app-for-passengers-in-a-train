@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color:white;
+            background-image: url("https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068220_960_720.jpg");
+            background-position: center;
+            background-size: cover;
+            }
+        input{
+            width: 50%;
+            padding: 15px;
+            margin: 5px 0px 22px 0px;
+            display: inline-block;
+            background: #f1f1f1;
+        }
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+        button {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0px;
+            width: 30%;
+        }
+    </style>
+    <script type="text/javascript">
+        function check(){
+            var a=document.getElementById("name").value;
+            var b=document.getElementById("num").value;
+            var c=document.getElementById("email").value;
+            var d=document.getElementById("pw").value;
+            var pat1=/\w/i;
+            var pat2=/\d{10}/;
+            var pat3=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var pat4=/[A-Za-z0-9]{8,}/;
+            if(a.match(pat1)&&b.match(pat2)&&c.match(pat3)&&d.match(pat4))
+            {
+                alert("Successfully registered!!!");
+                window.location="log.html";
+            }
+            else
+            {
+                alert("Wrong data entered!!!");
+                window.location="register.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h1>Register</h1>
+        <h3><a href="log.html" style="color: greenyellow">CLICK HERE </a>if you already have an account to login!</h3>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        <form method="POST" action="log.php">
+        <label><b>NAME:</b></label><br>
+        <input type="text" placeholder="Enter your Name" id="name" required/><br>
+        <label><b>PHONE NUMBER:</b></label><br>
+        <input type="text" placeholder="Enter phone number" id="num" required/><br>
+        <label><b>E-MAIL:</b></label><br>
+        <input type="text" placeholder="Enter your EmailId" id="email" required/><br>
+        <label><b>PASSWORD:</b></label><br>
+        <input type="password" placeholder="Enter a Password" id="pw" required/><br>
+        <p>(Password must contain atleast 8 characters).</p>
+        <p><b>By creating an account you agree to our Terms and Privacy</b></p>
+        <button type="button" onClick="check()">REGISTER</button>
+        </form>
+    </form>
+</body>
+</html>
